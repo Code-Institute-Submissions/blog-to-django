@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Blog
+from .forms import BlogForm
 
 
 class HomeView(ListView):
@@ -16,6 +17,5 @@ class RecipeDescription(DetailView):
 
 class NewDishCard(CreateView):
     model = Blog
+    form_class = BlogForm
     template_name = 'add_blog.html'
-    fields = '__all__'
-

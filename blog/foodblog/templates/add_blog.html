@@ -4,10 +4,11 @@
 {% block content %}
 
     <h4>add dish here</h4>
-
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p }}
-        <button class="btn btn-success">Post</button>
+    <div class="input-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p }}
+            <button class="btn btn-success">Post</button>
+    </div>
 
 {% endblock %}
