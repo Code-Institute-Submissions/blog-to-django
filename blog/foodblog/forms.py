@@ -9,7 +9,21 @@ class BlogForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'dish': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'name of dish'}),
+            'dish': forms.TextInput(attrs={
+                'class': 'form-control', 'placeholder': 'name of dish'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
+            'card': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+
+
+class EditForm(forms.ModelForm):
+    class Meta:
+        model = Blog
+        fields = ('title', 'dish', 'card')
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'dish': forms.TextInput(attrs={
+                'class': 'form-control', 'placeholder': 'name of dish'}),
             'card': forms.Textarea(attrs={'class': 'form-control'}),
         }

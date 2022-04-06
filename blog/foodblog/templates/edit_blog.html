@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Edit Blog {% endblock %}
+
+{% block content %}
+
+    <h4>add dish here</h4>
+    <div class="input-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p }}
+            <button class="btn btn-success">Update</button>
+            <a href="{% url 'delete_blog' blog.pk %}">Delete</a>
+    </div>
+
+{% endblock %}

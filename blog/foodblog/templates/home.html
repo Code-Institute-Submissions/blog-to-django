@@ -10,6 +10,8 @@
             {{ blog.author.first_name }}
             {{ blog.author.last_name }}
             {{ blog.card }}
+            <a href="{% url 'edit_blog' blog.pk %}">Edit</a>
+            <a href="{% url 'delete_blog' blog.pk %}">Delete</a>
         </li>
     {% endfor %}
     </ul>

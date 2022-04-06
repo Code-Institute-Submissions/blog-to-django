@@ -8,5 +8,7 @@
 <p>{{ blog.card }}</p>
 
 <button><a href="{% url 'home' %}">back</a></button>
+<button><a href="{% url 'edit_blog' blog.pk %}">Edit</a></button>
+
 
 {% endblock %}
