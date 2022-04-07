@@ -11,8 +11,13 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
+      {% if user.is_authenticated %}
+        <div class="col-12 mt-0 bg-success py-1"></div>
+      {% else %}
+        <div class="col-12 mt-0 bg-danger py-1"></div>
+      {% endif %}
         <!-- navbar -->
-        <nav class="navbar navbar-expand navbar-light bg-light border-bottom border-5">
+          <nav class="navbar navbar-expand navbar-light bg-light border-bottom border-5">
             <div class="container">
               <a class="navbar-brand" href="#">Food</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,20 +28,31 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'new_blog' %}">New Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register' %}">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                  </li>
+                  {% if user.is_authenticated %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'new_blog' %}">New Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                  {% else %} 
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                  {% endif %}
                 </ul>
               </div>
             </div>
           </nav>
         <!-- navbar end -->
+        {% if user.is_authenticated %}
+          <div class="col-12 mt-0 bg-success py-1"></div>
+        {% else %}
+          <div class="col-12 mt-0 bg-danger py-1"></div>
+        {% endif %}
     </header>
 
     <div class="container">

@@ -3,6 +3,7 @@
 
 {% block content %}
 
+{% if user.if_authenticated %}
     <h4>Delete Title</h4>
     <p>Delete: {{ blog.title }}</p>
 
@@ -11,5 +12,7 @@
             {% csrf_token %}
             <button class="badge rounded-pill bg-danger">Delete</button>
     </div>
-
+{% else %}
+    <h1>You need to login</h1>
+{% endif %}
 {% endblock %}
