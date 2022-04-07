@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
+from ckeditor.fields import RichTextField
 
 
 class Blog(models.Model):
@@ -9,7 +10,8 @@ class Blog(models.Model):
     dish = models.CharField(
         max_length=20, null=False, blank=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    card = models.TextField()
+    # card = models.TextField()
+    card = RichTextField(blank=True, null=True)
     date_stamp = models.DateField(auto_now_add=True)
 
     def __str__(self):
