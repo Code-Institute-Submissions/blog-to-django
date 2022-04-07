@@ -4,17 +4,14 @@
 {% block content %}
 
 
-{% if user.if_authenticated %}
-    <h4>add dish here</h4>
+<div class="col my-5">
+    <h4>Add blog</h4>
     <div class="input-group">
         <form method="POST">
             {% csrf_token %}
             {{form.as_p }}
             <button class="btn btn-success">Post</button>
     </div>
-{% else %}
-    <h1>You need to login</h1>
-{% endif %}
-
+</div>
 
 {% endblock %}

@@ -3,16 +3,13 @@
 
 {% block content %}
 
-{% if user.if_authenticated %}
+<div class="mx-auto my-5 badge bg-light text-dark">
     <h4>Delete Title</h4>
     <p>Delete: {{ blog.title }}</p>
-
     <div class="input-group">
-        <form method="POST">
+        <form method="POST" class="mx-auto">
             {% csrf_token %}
-            <button class="badge rounded-pill bg-danger">Delete</button>
+        <button class="badge rounded-pill bg-danger">Delete</button>
     </div>
-{% else %}
-    <h1>You need to login</h1>
-{% endif %}
+</div>
 {% endblock %}
