@@ -4,12 +4,18 @@ from django.views.generic import UpdateView, DeleteView
 from .models import Blog
 from .forms import BlogForm, EditForm
 from django.urls import reverse_lazy
+from .filters import BlogFilter
 
 
 class HomeView(ListView):
     model = Blog
     template_name = 'home.html'
     ordering = ['-date_stamp']
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] = BlogFilter(self.request.GET, queryset=self.get_queryset())
+        return context
 
 
 class RecipeDescription(DetailView):

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'foodblog',
     'members',
     'ckeditor',
+    'django_filters',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
