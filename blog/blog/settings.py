@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-workspace-name-goes-here.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-drmaxpower-blogtodjango-o7kn0lf4y7n.ws-eu38.gitpod.io']
 
 
 # Application definition
