@@ -3,7 +3,7 @@
 
 {% block content %}
     {% for blog in object_list %}
-        <div class="card bg-light mx-auto my-5">
+        <div class="card bg-light mx-auto my-5 shadow p-3 bg-body rounded">
             <div class="card-body">
                 <h5 class="card-title"><a href="{% url 'recipe' blog.pk %}" class="text-dark">{{ blog.title }}</a></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><small>By: {{ blog.author.first_name }} {{ blog.author.last_name }} {{ blog.date_stamp }}</small></h6>
