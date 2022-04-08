@@ -6,4 +6,7 @@ class BlogFilter(django_filters.FilterSet):
 
     class Meta:
         model = Blog
-        fields = ('title', 'dish')
+        fields = {
+            'title': ['icontains'],
+            'dish': ['icontains'],
+        }
