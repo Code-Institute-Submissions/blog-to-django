@@ -4,7 +4,11 @@
 {% block content %}
 
 <div class="col-lg-4 mx-auto my-3">
-{{ filter.form|bootstrap }}
+    <form action="" method="GET">
+        {{ filter.form|bootstrap }}
+        <button type="submit" class="btn btn-primary">Search</button>    
+    </form>
+    
 </div>
 
     {% for blog in filter.qs %}
