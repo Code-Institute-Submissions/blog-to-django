@@ -1,14 +1,22 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome DrMaxPower,
+This is a blog website aimed at food.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## foodblog1337
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Foodlovers all over the World like to share their tips and trix. As the fourth project of code-institute I made a blog based on frameworks. 
 
-## Gitpod Reminders
+The website is built in a MVT structure built in Django and Bootstrap to handle a clean and safe front-end design. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+There are also a Django filter and a Django-CKEditor extension embedded in the blog. 
+
+These functions optimally handle python logic and keep the kiss (keep it simple s*****) code to its limit. 
+
+In short, all python logic, CSS style, and frontend logic is embedded and tested with the framework. 
+
+------
+
+
 
 `python3 -m http.server`
 
